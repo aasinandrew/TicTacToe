@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		BB9B9AC31B58478A0012076B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9B9AC21B58478A0012076B /* main.m */; };
 		BB9B9AC61B58478A0012076B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9B9AC51B58478A0012076B /* AppDelegate.m */; };
-		BB9B9AC91B58478A0012076B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9B9AC81B58478A0012076B /* ViewController.m */; };
+		BB9B9AC91B58478A0012076B /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9B9AC81B58478A0012076B /* GameViewController.m */; };
 		BB9B9ACC1B58478A0012076B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB9B9ACA1B58478A0012076B /* Main.storyboard */; };
 		BB9B9ACE1B58478A0012076B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB9B9ACD1B58478A0012076B /* Images.xcassets */; };
 		BB9B9AD11B58478A0012076B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB9B9ACF1B58478A0012076B /* LaunchScreen.xib */; };
 		BB9B9ADD1B58478A0012076B /* TicTacToeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9B9ADC1B58478A0012076B /* TicTacToeTests.m */; };
+		BB9B9AE81B5863750012076B /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9B9AE71B5863750012076B /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +33,16 @@
 		BB9B9AC21B58478A0012076B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BB9B9AC41B58478A0012076B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BB9B9AC51B58478A0012076B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BB9B9AC71B58478A0012076B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BB9B9AC81B58478A0012076B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BB9B9AC71B58478A0012076B /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		BB9B9AC81B58478A0012076B /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		BB9B9ACB1B58478A0012076B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB9B9ACD1B58478A0012076B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BB9B9AD01B58478A0012076B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		BB9B9AD61B58478A0012076B /* TicTacToeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicTacToeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB9B9ADB1B58478A0012076B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB9B9ADC1B58478A0012076B /* TicTacToeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicTacToeTests.m; sourceTree = "<group>"; };
+		BB9B9AE61B5863750012076B /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		BB9B9AE71B5863750012076B /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +86,11 @@
 			children = (
 				BB9B9AC41B58478A0012076B /* AppDelegate.h */,
 				BB9B9AC51B58478A0012076B /* AppDelegate.m */,
-				BB9B9AC71B58478A0012076B /* ViewController.h */,
-				BB9B9AC81B58478A0012076B /* ViewController.m */,
+				BB9B9AC71B58478A0012076B /* GameViewController.h */,
+				BB9B9AC81B58478A0012076B /* GameViewController.m */,
 				BB9B9ACA1B58478A0012076B /* Main.storyboard */,
+				BB9B9AE61B5863750012076B /* WebViewController.h */,
+				BB9B9AE71B5863750012076B /* WebViewController.m */,
 				BB9B9ACD1B58478A0012076B /* Images.xcassets */,
 				BB9B9ACF1B58478A0012076B /* LaunchScreen.xib */,
 				BB9B9AC01B58478A0012076B /* Supporting Files */,
@@ -219,9 +224,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB9B9AC91B58478A0012076B /* ViewController.m in Sources */,
+				BB9B9AC91B58478A0012076B /* GameViewController.m in Sources */,
 				BB9B9AC61B58478A0012076B /* AppDelegate.m in Sources */,
 				BB9B9AC31B58478A0012076B /* main.m in Sources */,
+				BB9B9AE81B5863750012076B /* WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +288,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
