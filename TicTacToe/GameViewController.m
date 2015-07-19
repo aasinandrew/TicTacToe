@@ -47,8 +47,8 @@
         label.text = @"";
     }
 
-    self.t = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(decrementTimer) userInfo:nil repeats:YES];
-    //[[NSRunLoop mainRunLoop] addTimer:self.t forMode:NSRunLoopCommonModes];
+    [self.t invalidate];
+    self.t = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(decrementTimer) userInfo:nil repeats:YES];
 
 }
 
@@ -78,8 +78,7 @@
 }
 
 -(void)restartTimer {
-    self.t = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(decrementTimer) userInfo:nil repeats:YES];
-    [[NSRunLoop mainRunLoop] addTimer:self.t forMode:NSRunLoopCommonModes];
+    self.t = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(decrementTimer) userInfo:nil repeats:YES];
 }
 
 
@@ -91,8 +90,7 @@
 
 -(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue
 {
-    self.t = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(decrementTimer) userInfo:nil repeats:YES];
-    [[NSRunLoop mainRunLoop] addTimer:self.t forMode:NSRunLoopCommonModes];
+    self.t = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(decrementTimer) userInfo:nil repeats:YES];
 
 }
 
@@ -915,6 +913,7 @@
 
 
 -(void)computerWin {
+    [self.t invalidate];
     UIAlertController *computerWinAlert = [UIAlertController alertControllerWithTitle:@"Game Over" message:@"O Won" preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *restartAction = [UIAlertAction actionWithTitle:@"Start A New Game" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         [self viewDidLoad];
